@@ -1,0 +1,19 @@
+{
+  "name": "marca",
+  "version": "1.0.0",
+  "description": "Bookmark saving app ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/LizDominguez/bookmark-saver.git"
+  },
+  "author": "Liz Dominguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LizDominguez/bookmark-saver/issues"
+  },
+  "homepage": "https://github.com/LizDominguez/bookmark-saver#readme"
+}

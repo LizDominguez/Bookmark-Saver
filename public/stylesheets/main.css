@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Muli|Quicksand|Roboto');
+
+
+html, body {
+  margin: 0;
+  padding: 0; 
+}
+
+body {
+  background-color: #f9f9f9;
+  font-family: 'Muli';
+}
+
+/* LogIn Form*/
+
+.login-container {
+  text-align: center;
+}
+
+/* Navigation */
+
+header {
+  width: 100vw;
+  height: 55px;
+  margin-bottom: 20px;
+  border: 1px solid #d3d3d3;
+}
+
+header h1 {
+  font-size: 25px;
+  margin: 10px;
+  float: left;
+}
+
+.search-container {
+  height: 30px;
+  padding: 0px;
+  margin: 13px;
+  float: left;
+  background-color: #fff;
+}
+
+header input, button {
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.fa-bookmark {
+  float: right;
+  display: block;
+  padding: 19px;
+  margin-right: 10px;
+}
+
+
+/**************** Bookmarks ***************/
+
+.bookmarks {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bookmark {
+  width: 250px;
+  height: 215px;
+  margin: 10px;
+  border: 1px solid #d3d3d3;
+}
+
+.bookmark .top-bar {
+  height: 45px;
+  width: 100%;
+  font-size: .8em;
+  background-color: #f9f9f9;
+}
+
+.bookmark h4, .bookmark i {
+  margin: 0 auto;
+  padding: 15px;
+  display: inline-block;
+}
+
+.bookmark i {
+  float: right;
+  color: #d3d3d3;
+}
+
+.thumbnail {
+  height: 170px;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+
+@media only screen and (min-width: 800px) {
+
+  
+}
+
