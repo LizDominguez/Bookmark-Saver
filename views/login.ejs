@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/public/stylesheets/main.css">
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>LogIn</title>
+
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Marca</h1>
+    <form action ="/login" method="POST">
+        <div class="form-group">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          <input class="form-control" type="text" name="username" placeholder ="username">
+        </div>
+        <div class="form-group">
+          <i class="fa fa-key" aria-hidden="true"></i>
+          <input class="form-control" type="password" name="password" placeholder ="password">
+         </div>
+
+         <div class="form-group">
+             <input class="login-button" type="submit" value="Login">
+        </div>
+    </form>
+    <p>Don't have an account? <a href="/register">Sign Up</a></p>
+</div>
+
+
+
+<script type="text/javascript" src="main.js">
+  </script>
+
+</body>
+</html>

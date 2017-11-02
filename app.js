@@ -1,25 +1,27 @@
-var navIcons = document.querySelectorAll("nav li");
+const express = require ('express'),
+      app = express(),
+      bodyParser = require("body-parser");
 
-init();
+app.use(bodyParser.urlencoded({extended: true}));
+app.set("view engine", "ejs");
 
-function init() {
-  for (var i = 0; i < navIcons.length; i++) {
+app.get('/', function(req, res) {
+  res.redirect('/login');
+});
 
-    navIcons[i].addEventListener("click", function(){
+app.get('/login', function(req, res) {
+  res.render('login');
+});
 
-      removeSelected();
-      this.classList.toggle("selected");
+app.get("/register", function(req, res){
+   res.render("register");
+});
 
-    });
+app.get("/bookmarks", function(req, res){
+   res.render("bookmarks");
+});
 
-  }
-}
 
-
-function removeSelected() {
-  
-  for (var i = 0; i < navIcons.length; i++) {
-    navIcons[i].classList.remove("selected");
-  }
-
-}
+app.listen(3000, function () {
+  console.log('Bookmark-Saver has started!')
+});
