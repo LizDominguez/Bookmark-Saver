@@ -117,7 +117,17 @@ header {
   width: 250px;
   height: 215px;
   margin: 10px;
-  border: 1px solid @dark-grey;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+  .top-bar {
+    height: 45px;
+    width: 100%;
+    font-size: .8em;
+    background-color: @light-grey;
+    border-radius: 5px 5px 0 0;
+    // border: .5px solid @dark-grey;
+  }
 
   h4 {
     margin: 0 auto;
@@ -132,13 +142,6 @@ header {
     float: right;
     color: @dark-grey;
     cursor: pointer;
-  }
-
-  .top-bar {
-    height: 45px;
-    width: 100%;
-    font-size: .8em;
-    background-color: @light-grey;
   }
 }
 

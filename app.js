@@ -23,6 +23,10 @@ app.get("/bookmarks", function(req, res){
    res.render("bookmarks");
 });
 
+app.get("/bookmarks/new", function(req, res){
+   res.render("new");
+});
+
 
 app.listen(3000, function () {
   console.log('Bookmark-Saver has started!')
