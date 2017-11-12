@@ -27,6 +27,14 @@ const colors = [
   {
     name: 'Eggplant',
     code: 'rgb(103, 58, 183)'
+  },
+  {
+    name: 'Navy',
+    code: 'rgb(63, 81, 181)'
+  },
+  {
+    name: 'Blue',
+    code: 'rgb(33, 150, 243)'
   }
 ];
 
@@ -47,6 +55,11 @@ const colors = [
 
 optionButton.addEventListener('click', () => {
   nav.classList.toggle('hidden');
+});
+
+document.getElementById('menu-button').addEventListener('click', () => {
+  var menu = document.querySelector('.menu');
+  menu.classList.toggle('slide');
 });
 
 colorDownArrow.addEventListener('click', () => {

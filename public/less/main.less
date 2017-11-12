@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli|Quicksand|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Muli|Quicksand|Roboto:100');
 
 @light-grey: #f9f9f9;
 @med-grey: #efefef;
@@ -58,6 +58,10 @@ header {
     font-size: 15px;
   }
 
+  button {
+    cursor: pointer;
+  }
+
   /* Navigation */
 
   #options-button {
@@ -96,18 +100,6 @@ header {
   }
 }
 
-.hidden {
-  display: none;
-}
-
-.content-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: left;
-}
-
 /* Menu */
 
   #menu-button {
@@ -122,26 +114,11 @@ header {
     width: 230px;
     height: 100vh;
     margin-top: -20px;
+    margin-left: -230px;
     background-color: @light-grey;
     line-height: 30px;
     float: left;
-
-    .colors {
-      width: 100%;
-      height: 50%;
-      overflow: scroll;
-
-      a, .color {
-        display: inline-block;
-        margin: 5px 10px 5px 10px;
-      }
-
-      .color {
-        width: 25px;
-        height: 25px;
-        float:right;
-      }
-    }
+    transition-duration: 0.3s;
 
     .menu-bar {
       background-color: @med-grey;
@@ -149,6 +126,7 @@ header {
       text-transform: uppercase;
       padding: 5px;
       height: 25px;
+      cursor: default;
 
       h2, img {
         font-size: 15px;
@@ -160,6 +138,38 @@ header {
       h2 {
         float: left;
         margin-top: -2px;
+      }
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    .colors, .tags {
+      width: 100%;
+      height: 250px;
+      overflow: scroll;
+
+      a, .color {
+        display: inline-block;
+        margin: 5px 10px 5px 10px;
+        cursor: text;
+      }
+
+      .color {
+        width: 25px;
+        height: 25px;
+        float:right;
+        cursor: default;
+      }
+    }
+
+    .tags {
+      padding: 0 5px 0 5px;
+
+      a {
+        margin: 5px auto;
+        cursor: pointer;
       }
     }
   }
@@ -212,6 +222,16 @@ header {
     width: 100%;
     height: 100%;
   }
+}
+
+/* Effects */
+
+.hidden {
+  display: none;
+}
+
+.slide {
+  margin-left: 0;
 }
 
 
