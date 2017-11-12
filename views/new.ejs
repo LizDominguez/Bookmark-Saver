@@ -9,7 +9,6 @@
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-<script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
   <title>Add Bookmark</title>
 
 </head>
@@ -20,7 +19,11 @@
   <form action ="/login" method="POST">
 
     <div class="input-container">
-      <input type="file" accept=".jpg, .jpeg, .png" name="bookmark[image]">
+      <label>Pick Tab Color</label>
+      <div class="color-selector">
+      </div>
+      <canvas width="250px" height="315px">
+      </canvas>
     </div>
 
     <div class="input-container">
@@ -29,6 +32,9 @@
 
       <label for="url">Link to Bookmark</label>
       <input type="url" name="bookmark[url]" placeholder ="https://">
+
+      <label for="image">Upload Image</label>
+      <input type="file" accept=".jpg, .jpeg, .png" name="bookmark[image]">
 
       <label for="tags">Add tags</label>
       <textarea name="bookmark[tags]">website, picture...</textarea>

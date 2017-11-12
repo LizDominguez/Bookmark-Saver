@@ -3,6 +3,7 @@
 @light-grey: #f9f9f9;
 @med-grey: #efefef;
 @dark-grey: #d3d3d3;
+@accent-color: #c3c3c3;
 @text-color: #211922;
 
 html, body {
@@ -21,31 +22,19 @@ body {
   text-align: center;
 }
 
-/* Navigation */
+/* Header */
 
 header {
   width: 100vw;
   height: 70px;
   margin-bottom: 20px;
-  border: 1px solid @dark-grey;
+  background-color: @light-grey;
 
-  h1 {
-    font-size: 25px;
-    margin: 18px;
-    float: left;
-  }
-
-  #options {
-    float: right;
-    display: block;
-    padding: 28px;
-    margin-right: 10px;
-    cursor: pointer;
-  }
+  /* Search Box */
 
   .search-container {
     height: 45px;
-    width: 300px;
+    width: 70%;
     padding: 0px;
     margin: 13px;
     float: left;
@@ -55,29 +44,37 @@ header {
   input, button {
     border: none;
     outline: none;
+    background: none;
     float: left;
     padding: 10px;
-    background-color: @med-grey;
     color: @dark-grey;
     font-size: 20px;
   }
 
   input {
-    width: 68%;
+    background-color: @med-grey;
+    width: 76%;
     height: 25px;
     font-size: 15px;
+  }
+
+  /* Navigation */
+
+  #options-button {
+    float: right;
+    display: block;
+    padding: 25px;
+    margin-right: 10px;
+    cursor: pointer;
   }
 
   nav {
     width: 200px;
     height: auto;
-    background-color: #fff;
+    background-color: @light-grey;
     line-height: 18px;
-    border: 1px solid @dark-grey;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 71px;
+    top: 70px;
     right: 10px;
     z-index: 100;
 
@@ -87,13 +84,13 @@ header {
       text-decoration: none;
       text-align: left;
       font-weight: bold;
-      color: @text-color;
+      color: @accent-color;
     }
 
     hr {
       display: block;
       margin: 0px auto;
-      border: .5px solid @dark-grey;
+      border: .5px solid @light-grey;
     }
 
   }
@@ -103,11 +100,75 @@ header {
   display: none;
 }
 
+.content-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+}
+
+/* Menu */
+
+  #menu-button {
+    float: left;
+    display: block;
+    padding: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .menu {
+    width: 230px;
+    height: 100vh;
+    margin-top: -20px;
+    background-color: @light-grey;
+    line-height: 30px;
+    float: left;
+
+    .colors {
+      width: 100%;
+      height: 50%;
+      overflow: scroll;
+
+      a, .color {
+        display: inline-block;
+        margin: 5px 10px 5px 10px;
+      }
+
+      .color {
+        width: 25px;
+        height: 25px;
+        float:right;
+      }
+    }
+
+    .menu-bar {
+      background-color: @med-grey;
+      color: @accent-color;
+      text-transform: uppercase;
+      padding: 5px;
+      height: 25px;
+
+      h2, img {
+        font-size: 15px;
+        display: inline-block;
+        float: right;
+        margin: 0 5px 0 10px;
+      }
+
+      h2 {
+        float: left;
+        margin-top: -2px;
+      }
+    }
+  }
+
 /**************** Bookmarks ***************/
 
 .bookmarks {
   height: 100%;
-  width: 100vw;
+  // width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -135,12 +196,11 @@ header {
     display: inline-block;
   }
 
-  i {
+  .note-button {
     margin: 0 auto;
     padding: 15px;
     display: inline-block;
     float: right;
-    color: @dark-grey;
     cursor: pointer;
   }
 }

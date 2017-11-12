@@ -18,9 +18,15 @@
   "homepage": "https://github.com/LizDominguez/bookmark-saver#readme",
   "dependencies": {
     "ejs": "^2.5.7",
+    "eslint": "^4.10.0",
     "express": "^4.16.2"
   },
   "devDependencies": {
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
     "grunt": "^1.0.1",
     "grunt-contrib-less": "^1.4.1",
     "grunt-contrib-watch": "^1.0.0",
