@@ -213,6 +213,46 @@ header {
     float: right;
     cursor: pointer;
   }
+
+  .note {
+    background-color: @light-grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 23px;
+    text-align: left;
+    position: relative;
+    top: -215px;
+    left: 250px;
+
+    h2 {
+      color: @accent-color;
+      font-size: 15px;
+      margin: 0 auto;
+    }
+
+    textarea {
+      border: none;
+      height: 70px;
+      width: 200px;
+      margin: 10px 0 10px 0;
+      font-family: 'Roboto';
+    }
+
+    button {
+      border: none;
+      padding: 20px;
+      width: 40%;
+      background: @med-grey;
+      font-size: 15px;
+      color: @accent-color;
+      cursor: pointer;
+    }
+
+    textarea:focus, button:focus {
+      outline: 0;
+    }
+  }
 }
 
 .thumbnail {
