@@ -6,6 +6,8 @@ var tagDownArrow = document.getElementById('tag-down-arrow');
 
 var nav = document.querySelector('nav');
 var colorsDiv = document.querySelector('.colors');
+var noteButton = document.querySelector('.note-button');
+var note = document.querySelector('.note');
 
 const colors = [
   {
@@ -69,4 +71,8 @@ colorDownArrow.addEventListener('click', () => {
 tagDownArrow.addEventListener('click', () => {
   var tagsDiv = document.querySelector('.tags');
   tagsDiv.classList.toggle('hidden');
+});
+
+noteButton.addEventListener('click', () => {
+  note.classList.toggle('hidden');
 });
