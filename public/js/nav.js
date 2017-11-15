@@ -6,8 +6,6 @@ var tagDownArrow = document.getElementById('tag-down-arrow');
 
 var nav = document.querySelector('nav');
 var colorsDiv = document.querySelector('.colors');
-var noteButton = document.querySelector('.note-button');
-var note = document.querySelector('.note');
 
 const colors = [
   {
@@ -53,7 +51,8 @@ const colors = [
   for (let i = 0; i < colors.length; i++) {
     colorsDiv.innerHTML += '<div><a>' + colors[i].name + '</a>' + '<div class="color" style=" background-color:' + colors[i].code + ';">' + '</div>';
   }
-})();
+}
+)();
 
 optionButton.addEventListener('click', () => {
   nav.classList.toggle('hidden');
@@ -73,6 +72,16 @@ tagDownArrow.addEventListener('click', () => {
   tagsDiv.classList.toggle('hidden');
 });
 
-noteButton.addEventListener('click', () => {
-  note.classList.toggle('hidden');
-});
+(function noteHandler() {
+  var noteBtns = document.getElementsByClassName('note-button');
+  var noteContainer = document.querySelector('.note-container');
+  var saveBtn = document.getElementById('save');
+  for (let i = 0; i < noteBtns.length; i++) {
+    noteBtns[i].addEventListener('click', () => {
+      noteContainer.classList.toggle('hidden');
+    });
+  }
+  saveBtn.addEventListener('click', () => {
+    noteContainer.classList.toggle('hidden');
+  });
+})();

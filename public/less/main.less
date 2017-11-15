@@ -112,7 +112,7 @@ header {
 
   .menu {
     width: 230px;
-    height: 100vh;
+    min-height: 100vh;
     margin-top: -20px;
     margin-left: -230px;
     background-color: @light-grey;
@@ -168,7 +168,8 @@ header {
       padding: 0 5px 0 5px;
 
       a {
-        margin: 5px auto;
+        text-align: center;
+        margin: 0 auto;
         cursor: pointer;
       }
     }
@@ -178,7 +179,6 @@ header {
 
 .bookmarks {
   height: 100%;
-  // width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -197,7 +197,6 @@ header {
     font-size: .8em;
     background-color: @light-grey;
     border-radius: 5px 5px 0 0;
-    // border: .5px solid @dark-grey;
   }
 
   h4 {
@@ -213,44 +212,79 @@ header {
     float: right;
     cursor: pointer;
   }
+}
+
+/**************** Notes ***************/
+
+.note-container {
+  background-color: rgba( 255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+
 
   .note {
     background-color: @light-grey;
-    padding: 23px;
-    text-align: left;
-    position: relative;
-    top: -215px;
-    left: 250px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 800px;
+    width: 550px;
+    padding: 20px 30px 20px 30px;
+    margin: 50px 0 50px 0;
 
-    h2 {
-      color: @accent-color;
-      font-size: 15px;
-      margin: 0 auto;
+    .note-options {
+      width: 100%;
+      height: auto;
+
+      h2 {
+        color: @accent-color;
+        font-size: 20px;
+        float: left;
+        margin: 0 auto;
+      }
+
+      img {
+        float: right;
+      }
+
+      h2, img {
+        display: inline-block;
+        padding: 20px;
+      }
     }
 
     textarea {
       border: none;
-      height: 70px;
-      width: 200px;
-      margin: 10px 0 10px 0;
-      font-family: 'Roboto';
+      height: 80%;
+      width: 100%;
+      font: 14px 'Roboto';
+      resize: none;
+      border: 2px solid rgba(0, 0, 0, 0.1);
     }
 
     button {
-      margin-left: 30%;
       border: none;
       padding: 20px;
-      width: 40%;
+      width: 150px;
       background: @med-grey;
       font-size: 15px;
       color: @accent-color;
       cursor: pointer;
+      margin: 20px auto;
     }
 
     textarea:focus, button:focus {
       outline: 0;
     }
   }
+
 }
 
 .thumbnail {

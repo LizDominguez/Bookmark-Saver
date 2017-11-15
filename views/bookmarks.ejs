@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<!--     Navigation             -->
+<!--         Navigation             -->
 
   <header>
     <img src="/img/iconmonstr-menu-7.svg" id="menu-button">
@@ -39,6 +39,8 @@
       <a href="/logout">Log Out</a>
     </nav>
   </header>
+
+  <!--         Menu           -->
 
   <div class="menu">
     <div class="menu-bar">
@@ -65,7 +67,7 @@
 
   </div>
 
-<!--              Bookmarks            -->
+<!--             Bookmarks            -->
 
   <div class="bookmarks">
 
@@ -77,12 +79,6 @@
       <div class="thumbnail">
         <img src="/img/thumbnail.png">
       </div>
-      <div class="note">
-        <h2>Add Notes</h2>
-        <textarea>
-        </textarea>
-        <button>Save</button>
-      </div>
     </div>
 
     <div class="bookmark">
@@ -113,6 +109,20 @@
       <div class="thumbnail">
         <img src="/img/thumbnail.png">
       </div>
+    </div>
+  </div>
+
+<!--           Notes         -->
+
+  <div class="note-container hidden">
+    <div class="note">
+      <div class="note-options">
+        <h2>Site Name Note</h2>
+        <a href=""><img src="/img/iconmonstr-pencil-7.svg" alt="Edit"></a>
+      </div>
+      <textarea>
+      </textarea>
+      <button id="save">Save</button>
     </div>
   </div>
 
