@@ -34,32 +34,34 @@ header {
 
   .search-container {
     height: 45px;
-    width: 70%;
-    padding: 0px;
+    width: 60vw;
     margin: 13px;
     float: left;
     background-color: @med-grey;
-  }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-  input, button {
-    border: none;
-    outline: none;
-    background: none;
-    float: left;
-    padding: 10px;
-    color: @dark-grey;
-    font-size: 20px;
-  }
+    input, button {
+      border: none;
+      outline: none;
+      background: none;
+      color: @dark-grey;
+      font-size: 15px;
+    }
 
-  input {
-    background-color: @med-grey;
-    width: 76%;
-    height: 25px;
-    font-size: 15px;
-  }
+    input {
+      background-color: @med-grey;
+      width: 80%;
+      height: 95%;
+      font-size: 15px;
+    }
 
-  button {
-    cursor: pointer;
+    button {
+      width: 10%;
+      cursor: pointer;
+    }
+
   }
 
   /* Navigation */

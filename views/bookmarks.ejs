@@ -19,17 +19,15 @@
   <header>
     <img src="/img/iconmonstr-menu-7.svg" id="menu-button">
 
-    <div class="search-container">
-      <form>
-        <button id="submit" type="submit">
-          <img src="/img/iconmonstr-magnifier-2.svg">
-        </button>
-        <input id="search" type="text" placeholder="Search tags..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter tags...'">
-      </form>
-      <button>
+    <form class="search-container">
+      <button id="submit-search" type="submit">
+        <img src="/img/iconmonstr-magnifier-2.svg">
+      </button>
+      <input id="search-field" type="text" placeholder="Search tags..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter tags...'">
+      <button id="clear-search">
         <img src="/img/iconmonstr-x-mark-4.svg">
       </button>
-    </div>
+    </form>
 
     <img src="/img/iconmonstr-bookmark-21.svg" id="options-button">
 
