@@ -31,20 +31,27 @@ form {
     flex-wrap: nowrap;
     flex-direction: column;
     margin: 0 20px 0 20px;
+  }
 
-    .color-selector {
-      img {
-        display: block;
-        position: absolute;
-        top: 110px;
-        left: 65px;
-        z-index: 100;
-      }
+  .input-container:nth-child(1) {
+    height: 300px;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .color-square {
+      height: 60px;
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
   input, textarea {
     width: 250px;
+    resize:none;
     border: none;
     outline: none;
     padding: 10px;
