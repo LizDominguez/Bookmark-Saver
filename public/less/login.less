@@ -4,6 +4,7 @@
 @med-grey: #efefef;
 @dark-grey: #d3d3d3;
 @accent-color: #c3c3c3;
+@hover-color: #a3a3a3;
 @text-color: #1e1e1e;
 
 html, body {
@@ -29,6 +30,10 @@ body {
     color: @accent-color;
   }
 
+  a:hover {
+    color: @hover-color;
+  }
+
   .login-container {
     display: flex;
     align-items: center;
@@ -36,7 +41,7 @@ body {
     flex-direction: column;
     background-color: @light-grey;
     width: 400px;
-    height: 350px;
+    height: 400px;
 
     .input-container {
       background-color: @med-grey;
@@ -58,6 +63,20 @@ body {
 
     }
 
+    .alt-container {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      cursor: pointer;
+      color: @accent-color;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
     input {
       border: none;
       outline: none;
@@ -73,6 +92,10 @@ body {
       font-weight: bold;
       cursor: pointer;
       margin: 10px auto;
+    }
+
+    input[type="submit"]:hover {
+      background: rgb(66, 165, 70);
     }
   }
 

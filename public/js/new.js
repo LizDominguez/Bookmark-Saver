@@ -12,9 +12,6 @@ const colors = ['rgb(224, 64, 251)', 'rgb(128,0,0)', 'rgb(255,0,0)',
 let colorIndex = colors.length;
 let colorSquareContainer = document.querySelector('.input-container');
 
-drawColorSquares();
-addCheckMarks();
-
 function drawColorSquares() {
   for (let i = 0; i < colorIndex; i++) {
     colorSquareContainer.innerHTML += '<div class="color-square" style="background-color:' + colors[i] + ';"></div>';
@@ -37,3 +34,6 @@ function clearCheckMarks() {
     colorSquares[i].innerHTML = '';
   }
 }
+
+drawColorSquares();
+addCheckMarks();

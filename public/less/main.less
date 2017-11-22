@@ -220,7 +220,7 @@ header {
 /**************** Notes ***************/
 
 .note-container {
-  background-color: rgba( 255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   justify-content: center;
   height: 100%;
@@ -260,6 +260,7 @@ header {
       h2, img {
         display: inline-block;
         padding: 20px;
+        color: @text-color;
       }
     }
 
@@ -276,11 +277,15 @@ header {
       border: none;
       padding: 20px;
       width: 150px;
-      background: @med-grey;
+      background-color: rgb(33, 150, 243);
       font-size: 15px;
-      color: @accent-color;
+      color: #fff;
       cursor: pointer;
       margin: 20px auto;
+    }
+
+    button:hover {
+      background-color: rgb(23, 140, 233);
     }
 
     textarea:focus, button:focus {
