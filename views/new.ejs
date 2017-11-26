@@ -16,7 +16,7 @@
 
   <h2>Add New Bookmark</h2>
 
-  <form action ="/login" method="POST">
+  <form action ="/bookmarks" method="POST">
 
     <div class="input-container">
 
@@ -24,16 +24,16 @@
 
     <div class="input-container">
       <label for="title">Add Title</label>
-      <input type="text" name="bookmark[title]" placeholder ="Bookmark Title">
+      <input type="text" name="title" placeholder ="Bookmark Title">
 
       <label for="url">Link to Bookmark</label>
-      <input type="url" name="bookmark[url]" placeholder ="https://">
+      <input type="url" name="url" placeholder ="https://">
 
       <label for="image">Upload Image</label>
-      <input type="file" accept=".jpg, .jpeg, .png" name="bookmark[image]">
+      <input type="file" accept=".jpg, .jpeg, .png" name="imageUrl">
 
       <label for="tags">Add tags</label>
-      <textarea name="bookmark[tags]">website, picture...</textarea>
+      <textarea name="tags">website, picture...</textarea>
 
       <input type="submit" value="Submit">
     </div>

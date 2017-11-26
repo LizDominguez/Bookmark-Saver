@@ -45,9 +45,7 @@
     </div>
 
     <div class="colors">
-      <div>
-        <a>Red</a> <div class="color" style="background-color: red;"></div>
-      </div>
+      <!-- Colors fill here -->
     </div>
 
     <div class="menu-bar">
@@ -66,8 +64,23 @@
 <!--             Bookmarks            -->
 
   <div class="bookmarks">
+    <% bookmarks.forEach(function(bookmark) { %>
+      <div class="bookmark">
+        <div class="top-bar">
+          <a href="<%= bookmark.link %>">
+            <h4><%= bookmark.title %></h4>
+          </a>
+          <img src="/img/iconmonstr-note-14.svg" class="note-button">
+        </div>
+        <div class="thumbnail">
+          <a href="<%= bookmark.link %>">
+            <img src="<%= bookmark.imageUrl %>">
+          </a>
+        </div>
+      </div>
+    <% }); %>
 
-    <div class="bookmark">
+    <!-- <div class="bookmark">
       <div class="top-bar">
         <h4>Bookmark Title</h4>
         <img src="/img/iconmonstr-note-14.svg" class="note-button">
@@ -75,37 +88,8 @@
       <div class="thumbnail">
         <img src="/img/thumbnail.png">
       </div>
-    </div>
+    </div> -->
 
-    <div class="bookmark">
-      <div class="top-bar">
-        <h4>Bookmark Title</h4>
-        <img src="/img/iconmonstr-note-14.svg" class="note-button">
-      </div>
-      <div class="thumbnail">
-        <img src="/img/thumbnail.png">
-      </div>
-    </div>
-
-    <div class="bookmark">
-      <div class="top-bar">
-        <h4>Bookmark Title</h4>
-        <img src="/img/iconmonstr-note-14.svg" class="note-button">
-      </div>
-      <div class="thumbnail">
-        <img src="/img/thumbnail.png">
-      </div>
-    </div>
-
-    <div class="bookmark">
-      <div class="top-bar">
-        <h4>Bookmark Title</h4>
-        <img src="/img/iconmonstr-note-14.svg" class="note-button">
-      </div>
-      <div class="thumbnail">
-        <img src="/img/thumbnail.png">
-      </div>
-    </div>
   </div>
 
 <!--           Notes         -->
@@ -122,7 +106,7 @@
     </div>
   </div>
 
-  <script src="/js/nav.js"></script>
+  <script src="/js/bookmarks-main.js"></script>
 
 </body>
 </html>
