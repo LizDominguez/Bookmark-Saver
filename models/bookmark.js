@@ -1,11 +1,14 @@
 var mongoose = require('mongoose');
 
-var bookmarkSchema = new mongoose.Schema({
+let bookmarkSchema = new mongoose.Schema({
   title: String,
   link: String,
   tags: [String],
-  color: String,
-  imageUrl: String
+  imageUrl: String,
+  colorCategory: {
+    color: String,
+    category: String
+  }
 });
 
 module.exports = mongoose.model('Bookmark', bookmarkSchema);

@@ -66,10 +66,12 @@
   <div class="bookmarks">
     <% bookmarks.forEach(function(bookmark) { %>
       <div class="bookmark">
-        <div class="top-bar">
-          <a href="<%= bookmark.link %>">
-            <h4><%= bookmark.title %></h4>
-          </a>
+        <% if (bookmark.colorCategory.color) { %>
+          <div class="top-bar" style="background-color: <%= bookmark.colorCategory.color %>;">
+        <% } else { %>
+          <div class="top-bar">
+        <% } %>
+            <h4><a href="<%= bookmark.link %>"><%= bookmark.title %></a></h4>
           <img src="/img/iconmonstr-note-14.svg" class="note-button">
         </div>
         <div class="thumbnail">

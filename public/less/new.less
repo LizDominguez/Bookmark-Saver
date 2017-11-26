@@ -34,18 +34,23 @@ form {
   }
 
   .input-container:nth-child(1) {
-    height: 300px;
-    width: 250px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
 
-    .color-square {
-      height: 60px;
-      width: 60px;
+    .color-container {
+      height: 360px;
+      width: 250px;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .color-square {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 
@@ -63,6 +68,12 @@ form {
 
   input[type="submit"] {
     width: 100px;
+  }
+
+  #color-choice {
+    background-color: #fff;
+    color: @text-color;
+    text-align: right;
   }
 
 }

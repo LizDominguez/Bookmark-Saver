@@ -1,11 +1,10 @@
 'use strict';
 
-var optionButton = document.getElementById('options-button');
-var colorDownArrow = document.getElementById('color-down-arrow');
-var tagDownArrow = document.getElementById('tag-down-arrow');
-
-var nav = document.querySelector('nav');
-var colorsDiv = document.querySelector('.colors');
+var optionButton = document.getElementById('options-button'),
+  colorDownArrow = document.getElementById('color-down-arrow'),
+  tagDownArrow = document.getElementById('tag-down-arrow'),
+  nav = document.querySelector('nav'),
+  colorsDiv = document.querySelector('.colors');
 
 const colors = [
   {
@@ -47,12 +46,11 @@ const colors = [
 //   'rgb(255, 87, 34)', 'rgb(121, 85, 72)', 'rgb(250, 250, 250)',
 //   'rgb(224, 224, 224)', 'rgb(158, 158, 158)', 'rgb(0, 0, 0)'];
 
-(function generateColors() {
+function generateColors() {
   for (let i = 0; i < colors.length; i++) {
     colorsDiv.innerHTML += '<div><a contenteditable="true">' + colors[i].name + '</a>' + '<div class="color" style=" background-color:' + colors[i].code + ';">' + '</div>';
   }
 }
-)();
 
 optionButton.addEventListener('click', () => {
   nav.classList.toggle('hidden');
@@ -72,10 +70,10 @@ tagDownArrow.addEventListener('click', () => {
   tagsDiv.classList.toggle('hidden');
 });
 
-(function noteHandler() {
-  var noteBtns = document.getElementsByClassName('note-button');
-  var noteContainer = document.querySelector('.note-container');
-  var saveBtn = document.getElementById('save');
+function noteHandler() {
+  var noteBtns = document.getElementsByClassName('note-button'),
+    noteContainer = document.querySelector('.note-container'),
+    saveBtn = document.getElementById('save');
   for (let i = 0; i < noteBtns.length; i++) {
     noteBtns[i].addEventListener('click', () => {
       noteContainer.classList.toggle('hidden');
@@ -84,4 +82,7 @@ tagDownArrow.addEventListener('click', () => {
   saveBtn.addEventListener('click', () => {
     noteContainer.classList.toggle('hidden');
   });
-})();
+}
+
+generateColors();
+noteHandler();
