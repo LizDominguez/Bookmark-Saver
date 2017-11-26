@@ -41,12 +41,10 @@ app.post('/bookmarks', function(req, res) {
   var title = req.body.title,
     link = req.body.link,
     tags = req.body.tags,
-    colorCategory = {
-      color: req.body.colorCategory.color,
-      category: req.body.colorCategory.category
-    },
+    color = req.body.color,
+    category = req.body.category,
     imageUrl = req.body.imageUrl,
-    newBookmark = {title: title, link: link, tags: tags, colorCategory: colorCategory, imageUrl: imageUrl};
+    newBookmark = {title: title, link: link, tags: tags, color: color, category: category, imageUrl: imageUrl};
   Bookmark.create(newBookmark, function(err, newlyCreated) {
     if (err) {
       console.log(err);

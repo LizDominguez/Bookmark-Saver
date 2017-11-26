@@ -14,20 +14,25 @@
 </head>
 <body>
 
-  <h2>Add New Bookmark</h2>
+  <div class="other-controls">
+    <a href="/bookmarks">
+      <img src="/img/iconmonstr-arrow-64.svg">
+      <strong>Bookmarks</strong>
+    </a>
+  </div>
+
+  <h2>Add Bookmark</h2>
 
   <form action ="/bookmarks" method="POST">
 
     <div class="input-container">
+      <label for="title">Color Category</label>
+      <input type="text" name="category" placeholder="ex. Entertainment">
 
       <div class="color-container">
 
       </div>
-      <input id="color-choice" type="text" name="colorCategory.color" contenteditable="false">
-
-      <label for="title">Color Category</label>
-      <input type="text" name="colorCategory.category" placeholder="ex. Entertainment">
-
+      <input id="color-choice" type="text" name="color" contenteditable="false">
     </div>
 
     <div class="input-container">
@@ -50,8 +55,6 @@
     </div>
 
   </form>
-
-  <a href="/bookmarks">Go Back</a>
 
   <script src="/js/new.js"></script>
 

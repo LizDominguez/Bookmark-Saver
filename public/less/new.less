@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Muli|Quicksand|Roboto');
 
-@light-grey: #f9f9f9;
-@med-grey: #efefef;
-@dark-grey: #d3d3d3;
+@light-grey: #efefef;
+@med-grey: #c3c3c3;
+@dark-grey: #737373;
 @text-color: #1e1e1e;
 
 html, body {
@@ -20,6 +20,31 @@ body {
   align-items: center;
 }
 
+.other-controls {
+  margin-top: 20px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+
+  a {
+    text-decoration: none;
+    font-size: 18px;
+    color: @med-grey;
+    display: flex;
+    align-items: center;
+
+    img, strong {
+      display: block;
+      margin: 5px;
+    }
+  }
+}
+
+h2 {
+  margin-top: 0px;
+}
 
 form {
   display: flex;
@@ -36,6 +61,7 @@ form {
   .input-container:nth-child(1) {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .color-container {
       height: 360px;
@@ -61,7 +87,7 @@ form {
     outline: none;
     padding: 10px;
     margin: 10px auto;
-    background-color: @med-grey;
+    background-color: @light-grey;
     color: @dark-grey;
     font-size: 15px;
   }

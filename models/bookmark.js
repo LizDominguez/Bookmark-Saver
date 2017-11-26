@@ -5,10 +5,8 @@ let bookmarkSchema = new mongoose.Schema({
   link: String,
   tags: [String],
   imageUrl: String,
-  colorCategory: {
-    color: String,
-    category: String
-  }
+  color: String,
+  category: String
 });
 
 module.exports = mongoose.model('Bookmark', bookmarkSchema);

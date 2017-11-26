@@ -44,10 +44,21 @@
       <img id="color-down-arrow" src="/img/iconmonstr-arrow-69.svg"/>
     </div>
 
+    <!-- Bookmark Colors and Categories -->
     <div class="colors">
-      <!-- Colors fill here -->
+      <% bookmarks.forEach(function(bookmark) { %>
+        <% if (bookmark.category) { %>
+        <div>
+          <a contenteditable="true"><%= bookmark.category %></a>
+          <div class="color" style="background-color: <%= bookmark.color %>;">
+            <!-- color appears here -->
+          </div>
+        </div>
+        <% } %>
+      <% }); %>
     </div>
 
+    <!-- Bookmark Tags -->
     <div class="menu-bar">
       <h2>Tags</h2>
       <img id="tag-down-arrow" src="/img/iconmonstr-arrow-69.svg"/>
@@ -66,8 +77,8 @@
   <div class="bookmarks">
     <% bookmarks.forEach(function(bookmark) { %>
       <div class="bookmark">
-        <% if (bookmark.colorCategory.color) { %>
-          <div class="top-bar" style="background-color: <%= bookmark.colorCategory.color %>;">
+        <% if (bookmark.color) { %>
+          <div class="top-bar" style="background-color: <%= bookmark.color %>;">
         <% } else { %>
           <div class="top-bar">
         <% } %>
@@ -81,16 +92,6 @@
         </div>
       </div>
     <% }); %>
-
-    <!-- <div class="bookmark">
-      <div class="top-bar">
-        <h4>Bookmark Title</h4>
-        <img src="/img/iconmonstr-note-14.svg" class="note-button">
-      </div>
-      <div class="thumbnail">
-        <img src="/img/thumbnail.png">
-      </div>
-    </div> -->
 
   </div>
 
